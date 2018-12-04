@@ -1,0 +1,40 @@
+{
+  "name": "ImageDownloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Avinash Patil",
+    "email": "avinash24.p@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.16.1",
+    "check-files-exist": "^1.0.1",
+    "connect": "^3.6.6",
+    "connect-flash": "^0.1.1",
+    "dateformat": "^3.0.3",
+    "del": "^3.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "fs-extra": "^7.0.0",
+    "install": "^0.12.1",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.22.2",
+    "multer": "^1.4.0",
+    "nodemailer": "^4.6.8",
+    "npm": "^6.4.1",
+    "pdfkit": "^0.8.3",
+    "pdfmake": "^0.1.38",
+    "req-flash": "0.0.3",
+    "string_decoder": "^1.1.1",
+    "tar-fs": "^1.16.3",
+    "xlsx": "^0.14.0",
+    "zip-folder": "^1.0.0"
+  }
+}

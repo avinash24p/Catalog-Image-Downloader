@@ -1,0 +1,58 @@
+<html lang="en">
+
+   <%- include header %>
+   <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Welcome</h1>
+        <p>Hello Dashboard</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="/home/profile" role="button">SOW Generation »</a>
+          <form class="md-form">
+            <div class="file-field">
+                <div class="btn btn-primary btn-sm float-left waves-effect waves-light">
+                    <span>Choose file</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload your file">
+                </div>
+            </div>
+        </form>
+          <!-- IMAGE UPLOAD FORM -->
+        <form action="" enctype="multipart/form-data" method="POST" class="md-form">
+         
+          <div class="inner-wrap">
+            <div class="section" id="note">Note: Only .xlsx files are allowed.</div>
+
+            <label><input type="file" id="catalog" name="catalog" onchange="checkextension()" multiple /></label>
+            <script>
+              function checkextension() {
+                var file = document.querySelector("#catalog");
+                var fileName = file.files[0].name;
+                console.log('check value ', file.files[0].name);
+                if (/\.(xlsx|xls)$/i.test(file.files[0].name) === false) {
+
+                  alert("Not a valid Sheet!");
+                  $('#catalog').val(null);
+                } else if (file.files[0].name === 'undefined') {
+                  alert("Please select a file");
+                }
+              }
+            </script>
+
+
+            <div class="button-section">
+              <input type="submit" name="Upload" value="Upload File" />
+            </div>
+          </div>
+
+      </div>
+      </form>
+        </p>
+      </div>
+
+    
+    <%- include footer %>
+
+
+

@@ -1,0 +1,90 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>C I D - &copy; Catalog Image Downloader</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <a class="btn btn-lg btn-primary" id="dwnld" href="/" role="button">Go Back</a>
+                       
+
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container-fluid -->
+        </nav>
+
+        <body>
+            <div id="someId" data-config=<%=data %>></div>
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    Downloads
+                </a>
+                
+
+                <!-- <a href="#" class="list-group-item"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                Windows</a>
+            <a href="#" class="list-group-item"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                OS X</a>
+            <a href="#" class="list-group-item"><i class="fa fa-check-circle" aria-hidden="true"></i>
+                Linux</a> -->
+            </div>
+
+        </body>
+
+        <script>
+            var userId = $('#someId').data('config');
+            var data = userId.toString().split(',');
+            var req = new XMLHttpRequest();
+            // console.log(data);
+            data.forEach(element => {
+                console.log(element);
+
+                var hrefAttr = "/zip/" + element;
+
+                // var xhr = $.ajax({
+                //     async: false,
+                //     url: hrefAttr,
+                //     success: function (response) {
+                //         var myDate = new Date(xhr.getResponseHeader("Last-Modified"));
+                //         var hours = myDate.getHours();
+                //         var min = (myDate.getMinutes() < 10 ? '0' : '') + myDate.getMinutes();
+                //         var ampm = (hours >= 12) ? "PM" : "AM";
+                //         myDate = myDate.getDate() + '-' + (myDate.getMonth() + 1) + '-' + myDate.getFullYear() + ' ' + myDate.getHours() + ':' + min + ' ' + ampm;
+
+                //         $("div.list-group").append('<a href=' + hrefAttr + ' download src=' + hrefAttr + ' class="list-group-item"><i class="fa fa-check-circle" aria-hidden="true"></i>' + element + '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ' + myDate + "</a>");
+                //         // return xhr.getResponseHeader("Last-Modified");
+                //     }
+                // });
+
+
+               
+                $("div.list-group").append('<a href=' + hrefAttr + ' download src=' + hrefAttr + ' class="list-group-item"><i class="fa fa-check-circle" aria-hidden="true"></i>' + element +"</a>");
+                //   alert(headers);
+
+
+            });
+
+        </script>
+    </div>
+</body>
+
+</html>
+
+</html>
